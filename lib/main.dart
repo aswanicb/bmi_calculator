@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:bmi_calculator/input_page.dart';
+import 'package:bmi_calculator/result_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,11 @@ class _BMICalculatorState extends State<BMICalculator> {
         primaryColor: Color(0xFF0A0E21),
         scaffoldBackgroundColor: Color(0xFF0A0E21),
       ),
-      home: InputPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => InputPage(),
+        '/result': (context) => ResultPage(),
+      },
     );
   }
 }
